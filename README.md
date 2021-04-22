@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# Semantic heading for React
 
+## Dynamic heading component.
+
+An automatic heading management compound component. Keeps track of the heading levels in the application and renders the correct <h> tag.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Example
+
+```jsx
+<Heading.Boundary>
+  <Heading.H>Heading 1</Heading.H>
+  <p>Example of semantic headings</p>
+  <Heading.Boundary>
+    <Heading.H>Heading 2</Heading.H>
+  </Heading.Boundary>
+  <Heading.Boundary>
+   <Heading.H>Heading 2</Heading.H>
+   <Heading.Boundary>
+     <Heading.H>Heading 3</Heading.H>
+   </Heading.Boundary>
+  </Heading.Boundary>
+</Heading.Boundary>
+```
 
 ## Available Scripts
 
