@@ -1,7 +1,15 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { LevelContext } from './Context'
 
+/**
+ * Opens a new heading section. Every <Heading.H> inside it renders one
+ * level deeper than the surrounding section.
+ *
+ * @param {object} props
+ * @param {React.ReactNode} props.children
+ * @param {1|2|3|4|5|6} [props.levelOverride] Hard-sets the heading level
+ *   for this section instead of incrementing the parent level.
+ */
 const Boundary = ({ children, levelOverride }) => (
   <LevelContext.Consumer>
     {level => (
@@ -15,10 +23,5 @@ const Boundary = ({ children, levelOverride }) => (
 )
 
 Boundary.displayName = 'Heading.Boundary'
-
-Boundary.propTypes = {
-  levelOverride: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-  children: PropTypes.any,
-}
 
 export default Boundary
